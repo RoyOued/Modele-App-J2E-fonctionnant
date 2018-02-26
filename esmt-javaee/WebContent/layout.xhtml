@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<h:head>
+
+<title> 	<ui:insert name="title"> Université Bambey (UADB) </ui:insert>  </title>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.2.0/cosmo/bootstrap.min.css"/>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"/>
+
+<script 
+src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"
+type="text/javascript"
+>
+
+</script>
+</h:head>
+
+<h:body>
+	<div class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<a href="create-etudiant.xhtml" class="navbar-brand"> 
+				<i class="icon-plus"> </i> Creer Etudiant  
+				</a>
+			</div>
+
+			<div class="navbar-header">
+				<a href="list-etudiant.xhtml" class="navbar-brand"> <i
+					class="icon-list" > </i> Liste des Etudiants
+				</a>
+			</div>
+
+			<div class="navbar-collapse collapse" id="navbar-main">
+				<ul class="nav navbar-nav navbar-rigth">
+					<li><a href="http://localhost:8080/glassfish-j2ee/" target="_blank">
+							<i class="icon-arrow-rigth"></i> Ecole Supérieure Multinationnales des Télécommunication(ESMT)
+					</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<ui:insert name="body"> Please define a body </ui:insert>
+
+	<div class="navbar navbar-default navbar-fixed-bottom">
+		<div class="container">
+			<div class="navbar-text">
+				<span style="color: #ffffff;">
+				 &copy; JEE7 2016 Université de Bambey, Tout droid reservé </span>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery.js" type="text/javascript"></script>
+</h:body>
+</html>

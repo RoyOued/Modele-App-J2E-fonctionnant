@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence 
+             http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	
+   <!-- transaction type : JTA ou RESOURCE_LOCAL -->
+   <persistence-unit name="scolaireService" transaction-type="JTA">
+	
+	
+	<jta-data-source>jdbc/cobayeDS</jta-data-source>
+   	<!-- persistent classes list, can be JARs -->
+   	<class>com.esmt.modele.entities.Etudiant</class>
+
+	<!-- La référence de base c'est plus eclipse link mais hibernate pour wildfly -->
+   <properties>
+      <!-- possible values are : 
+           none | create-tables | drop-and-create-tables -->
+		<!-- <property name="eclipselink.ddl-generation" value="none" /> -->
+		
+	   <!--  ALL FINEST FINER FINE CONFIG INFO WARNING SEVERE OFF -->
+	   <!-- CONFIG : logs the loading of persistent classes -->
+	   <!-- FINE : SQL requests are logged -->
+	  <!--  <property name="eclipselink.logging.level" value="INFO"/>
+	   <property name="eclipselink.logging.timestamp" 
+	             value="true"/> -->
+
+	   <!--  Possible values : sql-script | database | both -->
+	   <!-- <property name="eclipselink.ddl-generation.output-mode" value="both"/>
+	   <property name="eclipselink.logging.timestamp" 
+	             value="true"/> -->
+   </properties>
+   
+   </persistence-unit>
+
+</persistence>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<h:body>
+
+	<ui:composition template="layout.xhtml">
+	 
+		<ui:define name="title"> Liste des Etudiants</ui:define>
+		
+		<ui:define name="body">
+				<br></br><br></br><br></br>
+		
+	<div class="col-md-8 col-md-offset-1">
+	<h:dataTable value="#{etudiantController.lines}" var="line" styleClass="table table-bordered">
+	
+	<h:column>
+	<f:facet name="header"> <h:outputLabel value="ID: "/> </f:facet>
+	<h:link value="#{line.id}" outcome="edit-etudiant">
+	<f:param name="id" value="#{line.id}" />
+	</h:link>
+	</h:column>
+	
+	<h:column>
+	<f:facet name="header"> <h:outputLabel value="Nom: "/> </f:facet>
+	<h:link value="#{line.nom}" />
+	</h:column>
+	
+	<h:column>
+	<f:facet name="header"> <h:outputLabel value="Type Etudiant "/> </f:facet>
+	<h:link value="#{line.etudiantType}" />
+	</h:column>
+<h:column>
+	<f:facet name="header"> <h:outputLabel value="Action"/> </f:facet>
+	<h:form>
+<h:commandButton value="Supprimer" action="#{etudiantController.delete(line)}"/> 	
+<a href="rest/etudiant/#{line.id}" target="_blank"> XML </a>	
+	</h:form>
+	
+	</h:column>
+	</h:dataTable>
+	</div>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>
